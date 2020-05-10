@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="40dp"
         android:gravity="center"
         android:text="@string/sign_up"
@@ -36,6 +36,7 @@
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/EditText_sign_id"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:hint="로그인 시 사용할 아이디"
@@ -59,6 +60,7 @@
             android:textSize="18sp"/>
 
         <EditText
+            android:id="@+id/EditText_sign_pw"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:hint="영문/숫자/기호 포함 8글자 이상"
@@ -82,6 +84,7 @@
             android:textSize="18sp"/>
 
         <EditText
+            android:id="@+id/EditText_name"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:autofillHints=""
@@ -106,11 +109,37 @@
             android:textSize="18sp"/>
 
         <EditText
+            android:id="@+id/EditText_nickname"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:autofillHints=""
             android:hint="사용할 닉네임"
             android:inputType="text"
+            android:labelFor="@android:id/input" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="전화번호"
+            android:textColorHighlight="@color/colorOrange"
+            android:textColorLink="@color/colorOrange"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/EditText_phone"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:hint="휴대폰 번호 - 없이 입력"
+            android:inputType="number"
             android:labelFor="@android:id/input" />
     </LinearLayout>
 
@@ -164,13 +193,14 @@
 
 
     <Button
+        android:onClick="SignInOnClick"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:background="@color/colorOrange"
-        android:text="회원가입"
+        android:text="@string/sign_up"
         android:textColor="@color/colorWhite"/>
 
 </LinearLayout>

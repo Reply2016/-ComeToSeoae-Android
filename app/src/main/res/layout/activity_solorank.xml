@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/colorBlack">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="55dp"
+        android:background="@color/colorLightYellow"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/solo"
+            android:onClick="SoloOnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button2"
+            android:text="@string/solo"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/group"
+            android:onClick="GroupOnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="205dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button3"
+            android:text="@string/group"
+            android:textColor="@color/colorYellow"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="67dp"
+            android:paddingLeft="290dp"
+            android:paddingTop="12dp"
+            android:text="@string/date"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sr1"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="155dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="25dp"
+        android:paddingTop="9dp"
+        android:drawableRight="@drawable/gold"
+        android:text="@string/sr1"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr1-1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="155dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="5dp"
+        android:paddingTop="9dp"
+        android:layout_toRightOf="@+id/sr1"
+        android:text="@string/sp1"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr2"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:background="@color/colorLightYellow"
+        android:paddingLeft="25dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr1"
+        android:drawableRight="@drawable/sliver"
+        android:text="@string/sr2"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr2-1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@color/colorLightYellow"
+        android:paddingLeft="5dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr1"
+        android:layout_toRightOf="@+id/sr2"
+        android:text="@string/sp2"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr3"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="25dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr2"
+        android:drawableRight="@drawable/bronze"
+        android:text="@string/sr3"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr3-1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="5dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr2"
+        android:layout_toRightOf="@+id/sr3"
+        android:text="@string/sp3"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr4"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:background="@color/colorLightYellow"
+        android:paddingLeft="25dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr3"
+        android:text="@string/sr4"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr4-1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@color/colorLightYellow"
+        android:paddingLeft="5dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr3"
+        android:layout_toRightOf="@+id/sr4"
+        android:text="@string/sp4"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr5"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="25dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr4"
+        android:text="@string/sr5"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sr5-1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="5dp"
+        android:paddingTop="9dp"
+        android:layout_below="@+id/sr4"
+        android:layout_toRightOf="@+id/sr5"
+        android:text="@string/sp5"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+</RelativeLayout>

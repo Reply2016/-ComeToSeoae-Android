@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/solorank"
+        android:title="개인 랭킹"/>
+    <!--android:onClick="SoloRankOnClick"-->
+
+    <item android:id="@+id/grouprank"
+        android:title="그룹 랭킹"/>
+    <!--android:onClick="GroupRankOnClick"-->
+
+</menu>

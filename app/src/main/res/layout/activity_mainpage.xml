@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@color/colorBlack">
+
+        <!-- 센터가 아님, 조정 필요-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="219dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="373dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="50px"
+            android:layout_marginBottom="35px"
+            android:background="@drawable/border"
+            android:paddingLeft="20dp"
+            android:paddingTop="12dp"
+            android:text="@string/lv_1"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="560px"
+            android:layout_marginTop="88dp"
+            android:max="100"
+            android:progress="40" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="350dp"
+            android:layout_marginTop="86dp"
+            android:text="Lv.2"
+            android:textColor="@color/colorOrange"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/level2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="10dp"
+            android:drawableTop="@drawable/line"
+            android:text="@string/level"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/scan"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="133dp"
+            android:background="@drawable/button"
+            android:text="@string/save_point"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+
+    <!--도장들은 한번 더 layout 묶기-->
+    <ImageView
+        android:id="@+id/s1"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="210dp"
+        android:background="@null"
+        android:src="@drawable/s1" />
+
+    <ImageView
+        android:id="@+id/s2"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="210dp"
+        android:layout_toRightOf="@+id/s1"
+        android:background="@null"
+        android:src="@drawable/s2" />
+
+    <ImageView
+        android:id="@+id/s3"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="210dp"
+        android:layout_toRightOf="@+id/s2"
+        android:background="@null"
+        android:src="@drawable/s3" />
+
+    <ImageView
+        android:id="@+id/s4"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="210dp"
+        android:layout_toRightOf="@+id/s3"
+        android:background="@null"
+        android:src="@drawable/s4" />
+
+    <ImageView
+        android:id="@+id/s5"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s1"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:src="@drawable/s5" />
+
+    <ImageView
+        android:id="@+id/s6"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s1"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s5"
+        android:background="@null"
+        android:src="@drawable/s6" />
+
+    <ImageView
+        android:id="@+id/s7"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s1"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s6"
+        android:background="@null"
+        android:src="@drawable/s7" />
+
+    <ImageView
+        android:id="@+id/s8"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s1"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s7"
+        android:background="@null"
+        android:src="@drawable/s8" />
+
+    <ImageView
+        android:id="@+id/s9"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s5"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:src="@drawable/s9" />
+
+    <ImageView
+        android:id="@+id/s10"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s5"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s9"
+        android:background="@null"
+        android:src="@drawable/s10" />
+
+    <ImageView
+        android:id="@+id/s11"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s5"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s10"
+        android:background="@null"
+        android:src="@drawable/s11" />
+
+    <ImageView
+        android:id="@+id/s12"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s5"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s11"
+        android:background="@null"
+        android:src="@drawable/s12" />
+
+    <ImageView
+        android:id="@+id/s13"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s9"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:src="@drawable/s13" />
+
+    <ImageView
+        android:id="@+id/s14"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s9"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s13"
+        android:background="@null"
+        android:src="@drawable/s14" />
+
+    <ImageView
+        android:id="@+id/s15"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s9"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s14"
+        android:background="@null"
+        android:src="@drawable/s15" />
+
+    <ImageView
+        android:id="@+id/s16"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_below="@+id/s9"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/s15"
+        android:background="@null"
+        android:src="@drawable/s16" />
+
+    <!--버튼들은 한번 더 layout 묶기-->
+    <Button
+        android:id="@+id/rank"
+        android:onClick="RankOnClick"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="650dp"
+        android:background="@drawable/button"
+        android:text="@string/ranking"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/point"
+        android:onClick="PointOnClick"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rank"
+        android:layout_marginTop="650dp"
+        android:background="@drawable/button"
+        android:text="@string/use_point"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+</RelativeLayout>

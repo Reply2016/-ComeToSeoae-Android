@@ -1,4 +1,65 @@
 <resources>
     <string name="app_name">ExamplePrototype</string>
+    <string name="login">로그인</string>
     <string name="sign_up">회원가입</string>
+    <string name="title">서애로 마스터</string>
+    <string name="ranking">랭킹</string>
+    <string name="use_point">포인트 사용</string>
+    <string name="solo">개인</string>
+    <string name="group">그룹</string>
+    <string name="mypage">마이페이지</string>
+
+    <string name="save_point">적립하기</string>
+    <string name="lv_1">Lv.1 서애로 입문자</string>
+    <string name="lv_2"></string>
+    <string name="lv_3"></string>
+    <string name="lv_4"></string>
+    <string name="lv_5"></string>
+
+
+
+    <string name="use_1000p">1000P 사용</string>
+    <string name="useInfo_1000p">결제 금액에서 1000원이 할인되고,\n현재 포인트에서 1000P가 차감됩니다.</string>
+    <string name="use_2000p">2000P 사용</string>
+    <string name="useInfo_2000p">결제 금액에서 2000원이 할인되고,\n현재 포인트에서 2000P가 차감됩니다.</string>
+    <string name="use_5000p">5000P 사용</string>
+    <string name="useInfo_5000p">결제 금액에서 5000원이 할인되고,\n현재 포인트에서 5000P가 차감됩니다.</string>
+    <string name="use_10000p">10000P 사용</string>
+    <string name="useInfo_10000p">결제 금액에서 10000원이 할인되고,\n현재 포인트에서 10000P가 차감됩니다.</string>
+    <string name="use_20000p">20000P 사용</string>
+    <string name="useInfo_20000p">결제 금액에서 20000원이 할인되고,\n현재 포인트에서 20000P가 차감됩니다.</string>
+    <string name="use_50000p">50000P 사용</string>
+    <string name="useInfo_50000p">결제 금액에서 50000원이 할인되고,\n현재 포인트에서 50000P가 차감됩니다.</string>
+
+    <string name="staff_check">직원 확인</string>
+    <string name="precautions">※주의사항\n[직원 확인] 버튼을 누르는 순간 현재 포인트에서 명시된 포인트만큼 차감되므로, 반드시 직원에게 확인 받아 사용하시길 바랍니다.</string>
+
+    <string name="level">&#160;&#160;&#160;&#160;&#160;&#160;&#160;순위 : 87/125\n
+        &#160;&#160;&#160;&#160;&#160;&#160;총 포인트 : 510 P</string>
+    <string name="date">2020.5.12 기준</string>
+    <!--solo rank-->
+    <string name="sr1">1&#160;&#160;&#160;&#160;&#160;Lv.5 최윤호</string>
+    <string name="sp1">25600P</string>
+    <string name="sr2">2&#160;&#160;&#160;&#160;&#160;Lv.5 노란 도라에몽</string>
+    <string name="sp2">21820P</string>
+    <string name="sr3">3&#160;&#160;&#160;&#160;&#160;Lv.4 오유민</string>
+    <string name="sp3">20015P</string>
+    <string name="sr4">4&#160;&#160;&#160;&#160;&#160;Lv.4 종근당</string>
+    <string name="sp4">18950P</string>
+    <string name="sr5">5&#160;&#160;&#160;&#160;&#160;Lv.4 모모</string>
+    <string name="sp5">16245P</string>
+
+    <!--group rank-->
+    <string name="gr1">1&#160;&#160;&#160;&#160;&#160;컴퓨터공학과 (132)</string>
+    <string name="gp1">125600P</string>
+    <string name="gr2">2&#160;&#160;&#160;&#160;&#160;한소리 (46)</string>
+    <string name="gp2">121820P</string>
+    <string name="gr3">3&#160;&#160;&#160;&#160;&#160;목명성 (61)</string>
+    <string name="gp3">120015P</string>
+    <string name="gr4">4&#160;&#160;&#160;&#160;&#160;수학과 (57)</string>
+    <string name="gp4">118950P</string>
+    <string name="gr5">5&#160;&#160;&#160;&#160;&#160;경제학과 (70)</string>
+    <string name="gp5">116245P</string>
+
+
 </resources>

@@ -19,4 +19,14 @@
         <item name="colorAccent">@color/colorOrange</item>
         <item name="colorControlNormal">@color/colorOrange</item>
     </style>
+
+    <style name="popupTheme" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="colorPrimary">@color/colorOrange</item>
+        <item name="colorPrimaryDark">@color/colorOrange</item>
+        <item name="colorAccent">@color/colorOrange</item>
+
+        <!--타이틀 바 제거-->
+        <item name = "windowActionBar">false</item>
+        <item name = "windowNoTitle">true</item>
+    </style>
 </resources>
