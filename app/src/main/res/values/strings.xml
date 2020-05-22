@@ -17,19 +17,22 @@
     <string name="lv_5"></string>
 
 
+    <string name="free_beverage">음료수 1캔 무료</string>
+    <string name="free_rice">공깃밥 1개 무료</string>
+    <string name="free_soju">소주 1병 무료</string>
+    <string name="free_beer">맥주 1병 무료</string>
 
-    <string name="use_1000p">1000P 사용</string>
-    <string name="useInfo_1000p">결제 금액에서 1000원이 할인되고,\n현재 포인트에서 1000P가 차감됩니다.</string>
-    <string name="use_2000p">2000P 사용</string>
-    <string name="useInfo_2000p">결제 금액에서 2000원이 할인되고,\n현재 포인트에서 2000P가 차감됩니다.</string>
-    <string name="use_5000p">5000P 사용</string>
-    <string name="useInfo_5000p">결제 금액에서 5000원이 할인되고,\n현재 포인트에서 5000P가 차감됩니다.</string>
-    <string name="use_10000p">10000P 사용</string>
-    <string name="useInfo_10000p">결제 금액에서 10000원이 할인되고,\n현재 포인트에서 10000P가 차감됩니다.</string>
-    <string name="use_20000p">20000P 사용</string>
-    <string name="useInfo_20000p">결제 금액에서 20000원이 할인되고,\n현재 포인트에서 20000P가 차감됩니다.</string>
-    <string name="use_50000p">50000P 사용</string>
-    <string name="useInfo_50000p">결제 금액에서 50000원이 할인되고,\n현재 포인트에서 50000P가 차감됩니다.</string>
+    <string name="info_free_beverage">음료수 1캔 무료 - 2000P</string>
+    <string name="info_free_rice">공깃밥 1개 무료 - 1000P</string>
+    <string name="info_free_soju">소주 1병 무료 - 4000P</string>
+    <string name="info_free_beer">맥주 1병 무료 - 4000P</string>
+
+    <string name="use_1000P">1000P 사용</string>
+    <string name="useInfo_1000P">현재 포인트에서 1000P가 차감됩니다.</string>
+    <string name="use_2000P">2000P 사용</string>
+    <string name="useInfo_2000P">현재 포인트에서 2000P가 차감됩니다.</string>
+    <string name="use_4000p">4000P 사용</string>
+    <string name="useInfo_4000p">현재 포인트에서 4000P가 차감됩니다.</string>
 
     <string name="staff_check">직원 확인</string>
     <string name="precautions">※주의사항\n[직원 확인] 버튼을 누르는 순간 현재 포인트에서 명시된 포인트만큼 차감되므로, 반드시 직원에게 확인 받아 사용하시길 바랍니다.</string>

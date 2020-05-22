@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class PointActivity extends AppCompatActivity {
 
-    Button btn1t, btn2t, btn5t, btn10t, btn20t, btn50t;
+    Button pointBtn1, pointBtn2, pointBtn3, pointBtn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,25 +25,10 @@ public class PointActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
 
-        Button.OnClickListener btnListener = new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(PointActivity.this, PopupActivity.class);
-                startActivity(intent);
-                // switch문 써서 point마다 다른 창 띄우기
-            }
-        };
-        btn1t = (Button)findViewById(R.id.btn1t);
-        btn2t = (Button)findViewById(R.id.btn2t);
-        btn5t = (Button)findViewById(R.id.btn5t);
-        btn10t = (Button)findViewById(R.id.btn10t);
-        btn20t = (Button)findViewById(R.id.btn20t);
-        btn50t = (Button)findViewById(R.id.btn50t);
-        btn1t.setOnClickListener(btnListener);
-        btn2t.setOnClickListener(btnListener);
-        btn5t.setOnClickListener(btnListener);
-        btn10t.setOnClickListener(btnListener);
-        btn20t.setOnClickListener(btnListener);
-        btn50t.setOnClickListener(btnListener);
+        pointBtn1 = (Button)findViewById(R.id.coupon1);
+        pointBtn2 = (Button)findViewById(R.id.coupon2);
+        pointBtn3 = (Button)findViewById(R.id.coupon3);
+        pointBtn4 = (Button)findViewById(R.id.coupon4);
     }
 
     @Override
@@ -72,44 +57,36 @@ public class PointActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-/*
-    public void use1000p(){
-        //((PopupActivity)PopupActivity.popupContext).n = R.layout.activity_popup1;
-        //((PopupActivity)PopupActivity.popupContext).returnPointNum(R.layout.activity_popup1);
-        Intent intent = new Intent(PointActivity.this, PopupActivity.class);
+
+    //공깃밥 무료 버튼 클릭
+    public void couponRiceOnClick(View view){
+        //공깃밥 무료 쿠폰 팝업창 띄우기
+        Intent intent = new Intent(this, PopupActivity1.class);
         startActivity(intent);
     }
-    public void use2000p(){
-        //((PopupActivity)PopupActivity.popupContext).n = R.layout.activity_popup2;
-        //((PopupActivity)PopupActivity.popupContext).returnPointNum(R.layout.activity_popup2);
-        Intent intent = new Intent(PointActivity.this, PopupActivity.class);
+
+    //음료수 무료 버튼 클릭
+    public void couponBeverageOnClick(View view){
+        //음료수 무료 쿠폰 팝업창 띄우기
+        Intent intent = new Intent(this, PopupActivity2.class);
         startActivity(intent);
     }
-    public void use5000p(){
-        //((PopupActivity)PopupActivity.popupContext).n = R.layout.activity_popup3;
-        //((PopupActivity)PopupActivity.popupContext).returnPointNum(R.layout.activity_popup3);
-        Intent intent = new Intent(PointActivity.this, PopupActivity.class);
+
+    //소주 무료 버튼 클릭
+    public void couponSojuOnClick(View view){
+        //소주 무료 쿠폰 팝업창 띄우기
+        Intent intent = new Intent(this, PopupActivity3.class);
         startActivity(intent);
     }
-    public void use10000p(){
-        //((PopupActivity)PopupActivity.popupContext).n = R.layout.activity_popup4;
-        //((PopupActivity)PopupActivity.popupContext).returnPointNum(R.layout.activity_popup4);
-        Intent intent = new Intent(PointActivity.this, PopupActivity.class);
+
+    //맥주 무료 버튼 클릭
+    public void couponBeerOnClick(View view){
+        //맥주 무료 쿠폰 팝업창 띄우기
+        Intent intent = new Intent(this, PopupActivity4.class);
         startActivity(intent);
     }
-    public void use20000p(){
-        //((PopupActivity)PopupActivity.popupContext).n = R.layout.activity_popup5;
-        //((PopupActivity)PopupActivity.popupContext).returnPointNum(R.layout.activity_popup5);
-        Intent intent = new Intent(PointActivity.this, PopupActivity.class);
-        startActivity(intent);
-    }
-    public void use50000p(){
-        //((PopupActivity)PopupActivity.popupContext).n = R.layout.activity_popup6;
-        //((PopupActivity)PopupActivity.popupContext).returnPointNum(R.layout.activity_popup6);
-        Intent intent = new Intent(PointActivity.this, PopupActivity.class);
-        startActivity(intent);
-    }
-*/
+
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainPageActivity.class);

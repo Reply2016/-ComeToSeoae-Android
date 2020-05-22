@@ -10,7 +10,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class PopupActivity extends AppCompatActivity {
+public class PopupActivity4 extends AppCompatActivity {
     //public static Context popupContext;
     Button okBtn, closeBtn;
 
@@ -21,11 +21,9 @@ public class PopupActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_popup1);
+        setContentView(R.layout.activity_popup4);
 
     }
-
-
 
     // 확인 버튼 클릭 - 팝업창 ok 버튼 이벤트
     public void popupOk(View view){
