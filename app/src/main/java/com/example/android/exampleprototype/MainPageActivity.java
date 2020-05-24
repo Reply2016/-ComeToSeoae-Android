@@ -24,16 +24,13 @@ public class MainPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mainpage);
         backPressCloseHandler = new BackPressCloseHandler(this);
 
-        // home, mypage button
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
-
-        Button btn = (Button) findViewById(R.id.scan); // 적립하기
+        /*Button btn = (Button) findViewById(R.id.scan); // 적립하기
         Button btn2 = (Button) findViewById(R.id.rank); // 랭킹
         Button btn3 = (Button) findViewById(R.id.point); // 포인트 사용
         Button btn4 = (Button) findViewById(R.id.solo);
         Button btn5 = (Button) findViewById(R.id.group);
+        Button btn6 = (Button) findViewById(R.id.home);
+        Button btn7 = (Button) findViewById(R.id.mypage);*/
     }
 
     @Override
@@ -47,26 +44,16 @@ public class MainPageActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+    public void HomeOnClick(View view){
+        Intent intent = new Intent(this, MainPageActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
 
-        if (id == android.R.id.home){
-            //Toast.makeText(this, "홈 이동", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MainPageActivity.class);
-            startActivity(intent);
-            overridePendingTransition(0, 0);
-            return true;
-        }
-        if (id == R.id.mypage) {
-            Toast.makeText(this, "마이페이지 이동", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MyPageActivity.class);
-            startActivity(intent);
-            overridePendingTransition(0, 0);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void MyPageOnClick(View view){
+        Intent intent = new Intent(this, MyPageActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     public void RankOnClick(View view){

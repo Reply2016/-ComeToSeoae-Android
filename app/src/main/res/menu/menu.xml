@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
-    <item android:id="@+id/mypage"
-        android:title="@string/mypage"
-        android:icon="@drawable/user"
+    <item android:id="@+id/my"
+        android:title="@string/my"
+        android:icon="@drawable/gold"
         app:showAsAction="always"/>
 </menu>

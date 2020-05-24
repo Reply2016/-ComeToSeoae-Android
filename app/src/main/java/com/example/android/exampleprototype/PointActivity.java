@@ -20,11 +20,6 @@ public class PointActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_point);
 
-        // home, mypage button
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
-
         pointBtn1 = (Button)findViewById(R.id.coupon1);
         pointBtn2 = (Button)findViewById(R.id.coupon2);
         pointBtn3 = (Button)findViewById(R.id.coupon3);
@@ -35,27 +30,6 @@ public class PointActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == android.R.id.home){
-            //Toast.makeText(this, "홈 이동", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MainPageActivity.class);
-            startActivity(intent);
-            overridePendingTransition(0, 0);
-            return true;
-        }
-        if (id == R.id.mypage) {
-            Toast.makeText(this, "마이페이지 이동", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MyPageActivity.class);
-            startActivity(intent);
-            overridePendingTransition(0, 0);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     //공깃밥 무료 버튼 클릭
@@ -86,6 +60,17 @@ public class PointActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void HomeOnClick(View view){
+        Intent intent = new Intent(this, MainPageActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
+
+    public void MyPageOnClick(View view){
+        Intent intent = new Intent(this, MyPageActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
 
     @Override
     public void onBackPressed() {

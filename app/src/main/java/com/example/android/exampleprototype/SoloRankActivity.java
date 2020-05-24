@@ -16,11 +16,6 @@ public class SoloRankActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solorank);
-
-        // home, mypage button
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
     }
 
     @Override
@@ -29,26 +24,16 @@ public class SoloRankActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+    public void HomeOnClick(View view){
+        Intent intent = new Intent(this, MainPageActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
 
-        if (id == android.R.id.home){
-            //Toast.makeText(this, "홈 이동", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MainPageActivity.class);
-            startActivity(intent);
-            overridePendingTransition(0, 0);
-            return true;
-        }
-        if (id == R.id.mypage) {
-            Toast.makeText(this, "마이페이지 이동", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MyPageActivity.class);
-            startActivity(intent);
-            overridePendingTransition(0, 0);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void MyPageOnClick(View view){
+        Intent intent = new Intent(this, MyPageActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     @Override

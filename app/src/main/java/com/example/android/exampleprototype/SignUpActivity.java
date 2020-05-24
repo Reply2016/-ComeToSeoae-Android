@@ -5,13 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.regex.Pattern;
 
 //회원가입 페이지
 public class SignUpActivity extends AppCompatActivity {
@@ -25,6 +30,19 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        EditText idText = (EditText)findViewById(R.id.EditText_sign_id);
+        idText.setFilters(new InputFilter[] {filterAlphaNum});
+        String idString = idText.getText().toString();
+
+        EditText pwText = (EditText)findViewById(R.id.EditText_sign_pw);
+        pwText.setFilters(new InputFilter[] {filterAlphaNum});
+
+        EditText pwCheckText = (EditText)findViewById(R.id.EditText_sign_pw_check);
+        pwCheckText.setFilters(new InputFilter[] {filterAlphaNum});
+
+        EditText nameText = (EditText)findViewById(R.id.EditText_name);
+        nameText.setFilters(new InputFilter[] {filterKor});
 
         univSpinner = (Spinner) findViewById(R.id.univ_spinner);
         univAdapter = ArrayAdapter.createFromResource(this, R.array.univ, android.R.layout.simple_spinner_dropdown_item);
@@ -84,12 +102,32 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
+    public void IDCheckOnClick(View view){
+        EditText idText = (EditText)findViewById(R.id.EditText_sign_id);
+        String idString = idText.getText().toString();
+
+        if(idString.length() < 4){
+            Toast.makeText(SignUpActivity.this,"최소 4글자 이상이여야 합니다.", Toast.LENGTH_LONG).show();
+        }
+        else if(idString.length() >= 4){
+            // DB랑 연결해서 존재하는 아이디인지 확인
+            Toast.makeText(SignUpActivity.this,"사용할 수 있는 아이디입니다.", Toast.LENGTH_LONG).show();
+            /*
+            DB 연결로 파라미터 넘겨서 확인해야 함
+            if문으로 사용할 수 있는 아이디면 -> "사용할 수 있는 아이디입니다."
+            이미 있는 아이디면 -> "사용할 수 없는 아이디입니다."
+            */
+        }
+    }
+
     public void SignInOnClick(View view){
         //입력 칸들이 비어있는지 확인
         EditText editText_sign_id = (EditText)findViewById(R.id.EditText_sign_id);
         String sign_id_value = editText_sign_id.getText().toString();  //id에 입력된 값을 string으로
         EditText editText_sign_pw = (EditText)findViewById(R.id.EditText_sign_pw);
         String sign_pw_value = editText_sign_pw.getText().toString();  //pw에 입력된 값을 string으로
+        EditText edit_pw_check = (EditText)findViewById(R.id.EditText_sign_pw_check);
+        String pw_check_value = edit_pw_check.getText().toString();  // pw 확인 칸에 입력된 값을 string으로
         EditText editText_name = (EditText)findViewById(R.id.EditText_name);
         String name_value = editText_name.getText().toString();  //이름에 입력된 값을 string으로
         EditText editText_nickname = (EditText)findViewById(R.id.EditText_nickname);
@@ -97,10 +135,14 @@ public class SignUpActivity extends AppCompatActivity {
         EditText editText_phone = (EditText)findViewById(R.id.EditText_phone);
         String phone_value = editText_phone.getText().toString();  //전화번호에 입력된 값을 string으로
 
-        //아무것도 비어있지 않은 경우
-        if(sign_id_value.length() != 0 && sign_pw_value.length() != 0 && name_value.length() != 0 && nickname_value.length() != 0 && phone_value.length() != 0){
-            Toast.makeText(SignUpActivity.this,"회원가입 성공", Toast.LENGTH_LONG).show();
 
+        //아무것도 비어있지 않은 경우
+        if(sign_id_value.length() != 0 && sign_pw_value.length() != 0 && pw_check_value.length() != 0 && name_value.length() != 0
+                && nickname_value.length() != 0 && phone_value.length() != 0 && pw_check_value.equals(sign_pw_value)){
+            Toast.makeText(SignUpActivity.this,"회원가입 성공", Toast.LENGTH_LONG).show();
+            /*
+            파라미터로 디비에 넘길 부분
+             */
             //Login 페이지로 이동
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
@@ -114,28 +156,16 @@ public class SignUpActivity extends AppCompatActivity {
             */
         }
 
-        //아이디가 비어있는 경우
-        else if(sign_id_value.length() == 0){
-            Toast.makeText(SignUpActivity.this,"아이디를 입력해주세요.", Toast.LENGTH_LONG).show();
+        // 비밀번호 확인이 다른 경우
+        else if(!pw_check_value.equals(sign_pw_value)){
+            Toast.makeText(SignUpActivity.this,"비밀번호가 일치하지 않습니다.\n다시 확인해주세요.", Toast.LENGTH_LONG).show();
         }
-        //비밀번호가 비어있는 경우
-        else if(sign_pw_value.length() == 0) {
-            Toast.makeText(SignUpActivity.this,"비밀번호를 입력해주세요.", Toast.LENGTH_LONG).show();
-        }
-        //이름이 비어있는 경우
-        else if(name_value.length() == 0){
-            Toast.makeText(SignUpActivity.this,"이름을 입력해주세요.", Toast.LENGTH_LONG).show();
-        }
-        //닉네임이 비어있는 경우
-        else if(nickname_value.length() == 0){
-            Toast.makeText(SignUpActivity.this,"닉네임을 입력해주세요.", Toast.LENGTH_LONG).show();
-        }
-        //전화번호가 비어있는 경우
-        else if(phone_value.length() == 0){
-            Toast.makeText(SignUpActivity.this,"전화번호를 입력해주세요.", Toast.LENGTH_LONG).show();
+
+        // 입력 안된 칸이 있는 경우
+        else{
+            Toast.makeText(SignUpActivity.this,"모든 정보를 입력해주세요.", Toast.LENGTH_LONG).show();
         }
     }
-
 
     private void selectedMajor(int univ_num){
         switch(univ_num){  //선택한 univSpinner에 따라
@@ -206,4 +236,26 @@ public class SignUpActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    // 영문만 허용 (숫자 포함)
+    public InputFilter filterAlphaNum = new InputFilter() {
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+            Pattern ps = Pattern.compile("^[a-zA-Z0-9]+$");
+            if (!ps.matcher(source).matches()) {
+                return "";
+            }
+            return null;
+        }
+    };
+
+    // 한글만 허용
+    public InputFilter filterKor = new InputFilter() {
+        public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+            Pattern ps = Pattern.compile("^[ㄱ-ㅣ가-힣]+$");
+            if (!ps.matcher(source).matches()) {
+                return "";
+            }
+            return null;
+        }
+    };
 }

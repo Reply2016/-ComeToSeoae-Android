@@ -4,10 +4,10 @@
     <string name="sign_up">회원가입</string>
     <string name="title">서애로 마스터</string>
     <string name="ranking">랭킹</string>
-    <string name="use_point">포인트 사용</string>
+    <string name="use_point">포인트</string>
     <string name="solo">개인</string>
     <string name="group">그룹</string>
-    <string name="mypage">마이페이지</string>
+    <string name="my">마이페이지</string>
 
     <string name="save_point">적립하기</string>
     <string name="lv_1">Lv.1 서애로 입문자</string>
@@ -37,9 +37,8 @@
     <string name="staff_check">직원 확인</string>
     <string name="precautions">※주의사항\n[직원 확인] 버튼을 누르는 순간 현재 포인트에서 명시된 포인트만큼 차감되므로, 반드시 직원에게 확인 받아 사용하시길 바랍니다.</string>
 
-    <string name="level">&#160;&#160;&#160;&#160;&#160;&#160;&#160;순위 : 87/125\n
-        &#160;&#160;&#160;&#160;&#160;&#160;총 포인트 : 510 P</string>
-    <string name="date">2020.5.12 기준</string>
+    <string name="level">순위 : 87/125\n총 포인트 : 510 P</string>
+    <string name="date">2020.5.23 기준</string>
     <!--solo rank-->
     <string name="sr1">1&#160;&#160;&#160;&#160;&#160;Lv.5 최윤호</string>
     <string name="sp1">25600P</string>
