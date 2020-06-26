@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 //로그인 페이지
 public class LoginActivity extends AppCompatActivity {
+    private int limit_num = 8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

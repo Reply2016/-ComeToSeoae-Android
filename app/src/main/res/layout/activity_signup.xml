@@ -31,8 +31,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="아이디"
-            android:textColorHighlight="@color/colorOrange"
-            android:textColorLink="@color/colorOrange"
+            android:textColor="@color/colorBlack"
             android:textSize="18sp" />
 
         <EditText
@@ -64,6 +63,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="비밀번호"
+            android:textColor="@color/colorBlack"
             android:textColorHighlight="@color/colorOrange"
             android:textColorLink="@color/colorOrange"
             android:textSize="18sp"/>
@@ -88,6 +88,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="비밀번호 확인"
+            android:textColor="@color/colorBlack"
             android:textColorHighlight="@color/colorOrange"
             android:textColorLink="@color/colorOrange"
             android:textSize="18sp"/>
@@ -112,6 +113,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="이름"
+            android:textColor="@color/colorBlack"
             android:textColorHighlight="@color/colorOrange"
             android:textColorLink="@color/colorOrange"
             android:textSize="18sp"/>
@@ -137,6 +139,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="닉네임"
+            android:textColor="@color/colorBlack"
             android:textColorHighlight="@color/colorOrange"
             android:textColorLink="@color/colorOrange"
             android:textSize="18sp"/>
@@ -162,6 +165,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="전화번호"
+            android:textColor="@color/colorBlack"
             android:textColorHighlight="@color/colorOrange"
             android:textColorLink="@color/colorOrange"
             android:textSize="18sp"/>
@@ -188,6 +192,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="단과대"
+            android:textColor="@color/colorBlack"
             android:textColorHighlight="@color/colorOrange"
             android:textColorLink="@color/colorOrange"
             android:textSize="18sp" />
@@ -212,6 +217,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="학과"
+            android:textColor="@color/colorBlack"
             android:textColorHighlight="@color/colorOrange"
             android:textColorLink="@color/colorOrange"
             android:textSize="18sp" />

@@ -25,6 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
     private ArrayAdapter univAdapter;
     private Spinner majorSpinner;
     private ArrayAdapter majorAdapter;
+    private int limit_num = 8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +138,7 @@ public class SignUpActivity extends AppCompatActivity {
 
 
         //아무것도 비어있지 않은 경우
-        if(sign_id_value.length() != 0 && sign_pw_value.length() != 0 && pw_check_value.length() != 0 && name_value.length() != 0
+        if(sign_id_value.length() != 0 && sign_pw_value.length() >= limit_num && pw_check_value.length() >= limit_num && name_value.length() != 0
                 && nickname_value.length() != 0 && phone_value.length() != 0 && pw_check_value.equals(sign_pw_value)){
             Toast.makeText(SignUpActivity.this,"회원가입 성공", Toast.LENGTH_LONG).show();
             /*
@@ -160,7 +161,10 @@ public class SignUpActivity extends AppCompatActivity {
         else if(!pw_check_value.equals(sign_pw_value)){
             Toast.makeText(SignUpActivity.this,"비밀번호가 일치하지 않습니다.\n다시 확인해주세요.", Toast.LENGTH_LONG).show();
         }
-
+        // 비밀번호 조건에 맞지 않는 경우
+        else if(sign_pw_value.length() < limit_num){
+            Toast.makeText(SignUpActivity.this,"비밀번호가 조건을 만족하지 않습니다.\n다시 확인해주세요.", Toast.LENGTH_LONG).show();
+        }
         // 입력 안된 칸이 있는 경우
         else{
             Toast.makeText(SignUpActivity.this,"모든 정보를 입력해주세요.", Toast.LENGTH_LONG).show();
